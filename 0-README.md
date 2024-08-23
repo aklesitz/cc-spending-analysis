@@ -37,20 +37,20 @@ In order to improve query efficiency, data integrity, and reduce redundancy, I c
 1. Accounts
 * account_id PRIMARY KEY
 * account_name <br>
-[SQL ACCOUNTS TABLE CREATION]()
+[SQL ACCOUNTS TABLE CREATION](https://github.com/aklesitz/cc-spending-analysis/blob/main/accounts_table_creation.sql)
 
 2. Category Mapping 
 * orig_category (from all_accounts)
 * description (from all_accounts)
 * category (standardized category) <br>
 All of the different accounts have varying categories and descriptions for transactions, so I used a large CASE statement to standardize categories across all transactions. This mapping table can be modified as needed to update or change standardized categories as becomes necessary. <br>
-[SQL CATEGORY MAPPING TABLE CREATION]()
+[SQL CATEGORY MAPPING TABLE CREATION](https://github.com/aklesitz/cc-spending-analysis/blob/main/category_mapping.sql)
 
 3. Categories
 * category_id (Unique primary key)
 * category (Standardized categories pulled from cataegory mapping table) <br>
 My goal for these was to be as broad as possible (entertainment, travel, etc...). I got it down to 11 categories in total. <br>
-[SQL CATEGORIES TABLE CREATION]() 
+[SQL CATEGORIES TABLE CREATION](https://github.com/aklesitz/cc-spending-analysis/blob/main/category_table_creation.sql) 
 
 4. Transactions
 * transaction_id PRIMARY KEY
@@ -59,7 +59,7 @@ My goal for these was to be as broad as possible (entertainment, travel, etc...)
 * amount
 * description
 * category_id FOREIGN KEY
-[SQL TRANSACTIONS TABLE CREATION]()
+[SQL TRANSACTIONS TABLE CREATION](https://github.com/aklesitz/cc-spending-analysis/blob/main/transactions_table_creation.sql)
 
 # Next Steps
 * Set up automated scripts for data import
